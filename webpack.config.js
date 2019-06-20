@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    entry: './assets/src/index.js'
+    entry: './client/js/index.js'
   },
   output: {
     path: __dirname + '/.tmp/public',
@@ -24,7 +24,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'assets/src/index.html'
+      template: 'client/js/index.html'
     })
   ]
 };
