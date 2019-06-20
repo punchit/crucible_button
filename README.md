@@ -13,10 +13,6 @@ The project is an example of how crucibles on the ethereum network can be used.
 
 bootstrap sails and the repo
 ```
-npm install sails -g
-npm install -g @babel/cli
-npm install -g @babel/core
-npm install -g @babel/node
 npm install
 ```
 
