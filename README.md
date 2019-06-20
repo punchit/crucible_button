@@ -19,6 +19,6 @@ npm install
 
 run the development version of the crucible_button server
 ```
-npm run lift
+npm run lift:dev
 ```
 
