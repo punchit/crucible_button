@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 const App = () => {
   return (
     <div>
-      Simple Sails-React stater
+      Complex Sails-React stater
     </div>
   );
 };

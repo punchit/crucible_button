@@ -14,11 +14,14 @@ The project is an example of how crucibles on the ethereum network can be used.
 bootstrap sails and the repo
 ```
 npm install sails -g
+npm install -g @babel/cli
+npm install -g @babel/core
+npm install -g @babel/node
 npm install
 ```
 
 run the development version of the crucible_button server
 ```
-npm run lift:dev
+npm run open:client
 ```
 

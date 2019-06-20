@@ -1,13 +1,17 @@
+import webpack from 'webpack';
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const precss = require('precss');
 const autoprefixer = require('autoprefixer');
 const path = require('path');
 
 module.exports = {
-  mode: 'production',
-  entry: {
-    entry: './client/js/index.js'
-  },
+  mode: 'development',
+  devtool: 'source-map',
+  entry: [
+    './client/js/index.js',
+    'webpack-hot-middleware/client?reload=true'
+  ],
   output: {
     path: path.join(__dirname, '/.tmp/public'),
     filename: 'bundle.js',
@@ -48,7 +52,8 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'views/pages/homepage-webpack.ejs'
-    })
+      template: 'client/index.html'
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ]
 };

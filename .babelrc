@@ -1,16 +1,10 @@
 {
   "presets": [
-    "es2015",
     "@babel/preset-env",
     "@babel/react"
   ],
   "plugins": [
-    "transform-object-rest-spread",
-    "transform-class-properties"
-  ],
-  "env": {
-    "development": {
-      "presets": ["react-hmre"]
-    }
-  }
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-class-properties"
+  ]
 }
