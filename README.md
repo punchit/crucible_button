@@ -1,26 +1,17 @@
 # crucible-button
 
-a [Sails v1](https://sailsjs.com) application
+an ethereum based application that allows participants to commit
+to pressing a button every day.  If they meet that goal, after the period
+is up, they will get their funds back.  If they don't meet that goal they
+loose their funds.  Those that meet the goal get a portion of the funds
+of those that failed to meet the goal.
+
+The project is an example of how crucibles on the ethereum network can be used.
 
 
-### Links
+### Development
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
-
-
-### Version info
-
-This app was originally generated on Wed Jun 05 2019 12:35:32 GMT-0400 (Eastern Daylight Time) using Sails v1.2.2.
-
-<!-- Internally, Sails used [`sails-generate@1.16.12`](https://github.com/balderdashy/sails-generate/tree/v1.16.12/lib/core-generators/new). -->
-
-
-
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
+```
+npm run lift
+```
 
