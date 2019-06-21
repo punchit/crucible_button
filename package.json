@@ -8,14 +8,18 @@
     "@sailshq/connect-redis": "^3.2.1",
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
+    "bootstrap": "^4.3.1",
+    "css-loader": "^3.0.0",
     "grunt": "1.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "sails": "^1.2.2",
-    "sails-hook-grunt": "^4.0.0",
+    "reactstrap": "^8.0.0",
+    "sails": "^1.2.3",
+    "sails-hook-grunt": "^4.0.1",
     "sails-hook-orm": "^2.1.1",
-    "sails-hook-sockets": "^2.0.0"
+    "sails-hook-sockets": "^2.0.0",
+    "style-loader": "^0.23.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -32,15 +36,15 @@
     "opn": "^6.0.0",
     "precss": "^4.0.0",
     "rimraf": "^2.6.3",
-    "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.2",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0"
   },
   "scripts": {
     "start": "npm-run-all --parallel lift",
-    "start:dev": "npm-run-all --parallel open:client",
-    "start:debug": "npm-run-all --parallel open:client debug",
+    "start:dev": "npm-run-all --parallel open:client lift:dev",
+    "start:debug": "npm-run-all --parallel open:client lift:dev debug",
     "open:client": "npx babel-node tools/dev.js",
     "build": "npm run build:prod",
     "build:dev": "npx webpack --mode development",
@@ -63,13 +67,13 @@
   },
   "contributors": [
     {
-      "name" : "Christopher Mooney",
-      "email" : "chris@dod.net",
-      "url" : "https://github.com/godsflaw/"
+      "name": "Christopher Mooney",
+      "email": "chris@dod.net",
+      "url": "https://github.com/godsflaw/"
     },
     {
-      "name" : "Robert Field",
-      "email" : "snarfoid@yahoo.com"
+      "name": "Robert Field",
+      "email": "snarfoid@yahoo.com"
     }
   ],
   "license": "",

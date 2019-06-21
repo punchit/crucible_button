@@ -18,6 +18,6 @@ npm install
 
 run the development version of the crucible_button server
 ```
-npm run open:client
+npm run start:dev
 ```
 

@@ -1,12 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const App = () => {
-  return (
-    <div>
-      Complex Sails-React stater
-    </div>
-  );
-};
+import App from './components/app/App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(
+    <App />,
+    document.getElementById('root')
+);
