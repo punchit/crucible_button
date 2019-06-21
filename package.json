@@ -11,6 +11,7 @@
     "grunt": "1.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
     "sails": "^1.2.2",
     "sails-hook-grunt": "^4.0.0",
     "sails-hook-orm": "^2.1.1",
@@ -37,15 +38,19 @@
     "webpack-hot-middleware": "^2.25.0"
   },
   "scripts": {
-    "start": "npm-run-all --parallel open:client lift",
+    "start": "npm-run-all --parallel lift",
+    "start:dev": "npm-run-all --parallel open:client",
     "start:debug": "npm-run-all --parallel open:client debug",
     "open:client": "npx babel-node tools/dev.js",
     "build": "npm run build:prod",
     "build:dev": "npx webpack --mode development",
-    "build:staging": "npx webpack --mode staging",
+    "build:staging": "npx webpack --mode production",
     "build:prod": "npx webpack --mode production",
     "clean": "rimraf .tmp && mkdirp .tmp/public",
-    "lift": "npx sails lift",
+    "lift": "npm run lift:prod",
+    "lift:dev": "npx sails lift",
+    "lift:staging": "npx sails lift --prod --port 80",
+    "lift:prod": "npx sails lift --prod --port 80",
     "debug": "node --inspect app.js",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
@@ -56,7 +61,17 @@
     "type": "git",
     "url": "git://github.com/godsflaw/crucible-button.git"
   },
-  "author": "godsflaw",
+  "contributors": [
+    {
+      "name" : "Christopher Mooney",
+      "email" : "chris@dod.net",
+      "url" : "https://github.com/godsflaw/"
+    },
+    {
+      "name" : "Robert Field",
+      "email" : "snarfoid@yahoo.com"
+    }
+  ],
   "license": "",
   "engines": {
     "node": "^10.11"

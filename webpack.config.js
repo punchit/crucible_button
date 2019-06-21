@@ -48,7 +48,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'views/pages/homepage-webpack.ejs'
+      template: 'client/index.html'
     })
   ]
 };
