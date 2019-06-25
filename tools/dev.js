@@ -17,8 +17,7 @@ const serverConfig = {
   publicPath: webpackConfig.output.publicPath,
   historyApiFallback: true,
   proxy: {
-    '/crucible/*': 'http://localhost:1337',
-    '/participant/*': 'http://localhost:1337',
+    '/api/*': 'http://localhost:1337',
     '/derp/*': 'http://localhost:1337',
   },
   headers: {
